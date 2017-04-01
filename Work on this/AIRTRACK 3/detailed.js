@@ -48,34 +48,34 @@
 				console.log(Airlines, Type, Status);
 				document
 					.getElementById("logo")
-					.innerHTML+='<img class="icon" style="margin:0px; text-align:center; position:relative; top:20px; right:5px; border:dotted; border-color:#01ffff;" src="'+imgurl+'" width="200" height="200">';			
+					.innerHTML='<img class="icon" style="margin:0px; text-align:center; position:relative; top:20px; right:5px; border:dotted; border-color:#01ffff;" src="'+imgurl+'" width="200" height="200">';			
 				document
 					.getElementById("airName")
-					.innerHTML+=Flights[k].Airlines;
+					.innerHTML=Flights[k].Airlines;
 				document
 					.getElementById("source")
-					.innerHTML+=Flights[k].Source;
+					.innerHTML=Flights[k].Source;
 				document
 					.getElementById("destination")
-					.innerHTML+=Flights[k].Destination;
+					.innerHTML=Flights[k].Destination;
 				document
 					.getElementById("dest")
-					.innerHTML+=Flights[k].Dest;
+					.innerHTML=Flights[k].Dest;
 				document
 					.getElementById("srce")
-					.innerHTML+=Flights[k].Srce;
+					.innerHTML=Flights[k].Srce;
 				document
 					.getElementById("flName")
-					.innerHTML+=param[1];
+					.innerHTML=param[1];
 				document
 					.getElementById("gateNo")
-					.innerHTML+=Flights[k].Gate;
+					.innerHTML=Flights[k].Gate;
 				document
 					.getElementById("depTime")
-					.innerHTML+=Flights[k].ETD;
+					.innerHTML=Flights[k].ETD;
 				document
 					.getElementById("arrTime")
-					.innerHTML+=Flights[k].ETA;	
+					.innerHTML=Flights[k].ETA;	
 			}
 		}
 			function errData(err){
