@@ -22,10 +22,11 @@
 				var Offers = Restaurants[k].Offers;
 				var Description = Restaurants[k].Description;
 				var imgUrl = Restaurants[k].Logo;
+				var url="foodindie.html?v="+k;
 				console.log(Offers, Description);
 				document
 					.querySelector("#restaurantslist")
-					.innerHTML+='<li class="list-group-item Restaurants[k]" style="border-style:solid; text-align:center; border-color:Teal; text-decoration:none;border-width:10px; font-size:30px; margin:20px;  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); position:relative; width:500;  "><div><img style="text-align:riht;" src="'+imgUrl+'" width="150" height="150"><p style="pos "><p class="lead">'+k+'</p><p>'+Restaurants[k].Offers+'</p><p>'+Restaurants[k].Description+'</p></div></li>';
+					.innerHTML+='<li class="list-group-item Restaurants[k]" style="border-style:solid; text-align:center; border-color:Teal; text-decoration:none;border-width:10px; font-size:30px; margin:20px;  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); position:relative; width:500;  "><div><img style="text-align:riht;" src="'+imgUrl+'" width="150" height="150"><p style="pos "><p class="lead">'+k+'</p><p>'+Restaurants[k].Offers+'</p><p>'+Restaurants[k].Description+'</p></div><a href="'+url+'">See more</a></p></li>';
 			}
 		}
 
