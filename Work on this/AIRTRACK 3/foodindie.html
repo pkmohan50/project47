@@ -118,7 +118,7 @@ body {
     color: white;
     border-radius: 5px;
     padding: 15px 32px;
-    
+    border-width: 0px;
     text-decoration:none; 
     font-size: 16px;
     cursor: pointer;
@@ -178,51 +178,43 @@ function closeNav() {
 </div>
 
 <div class="jumbotron" >
-<div class="res">
+<div id="logo" class="res">
 
-<img class="icon" style="margin:0px; text-align:center; position:relative; top:20px; right:5px;" src="kfc.png" width="200" height="200">
 </div>
 
 <div class="text" style=" font-family: 'Titillium Web', sans-serif; font-size:20px; color:White; border:solid; border-color:#5a0407; margin:0px; padding:0px; background-color:#d40a10">
-<h1 style="padding:0px;">KFC</h1>
+<h1 id="name" style="padding:0px;"></h1>
 </div>
 </div>
   
-  <div class="info" style="font-family: 'Titillium Web', sans-serif; font-size:20px; color:White; text-align:center;">
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+  <div id="details" class="info" style="font-family: 'Titillium Web', sans-serif; font-size:20px; color:White; text-align:center;">
 </div> 
 <h1 style="position:relative;  left:100px; color:White; ">COUPONS</h1> 
 
-<div class="coup" style="position:relative; top:50px; right:10px; display:inline-block; text-align:center" >
-<div class="res" style="color:white; border:dashed; border-color: White;  width:100%">
+<div class="coup" style="position:relative; top:50px; right:10px; display:inline-block; text-align:center,width:100%;" >
+<div class="res" style="color:white; border:dashed; border-color: White; ">
 
-<p class="icona"> BUY A ZINGER AND GET COKE FREE</p>
-<h1>ZN500</h1>
-<div id="but" style=" position:relative; top:90px;">
-<button class="button" style="  position: relative;
-     bottom: 100px;">COPY</button>
+<p id="but1" class="icona"> </p>
+<div  style=" position:relative; top:90px; padding:20px; padding-right: ">
+<button id="but" class="button" style="  position: relative;
+     bottom: 100px;"></button>
 </div>
 </div></a>
 
 
 
-<div class="res" style="margin-top:6px; text-align:center; color:white; border:dashed; border-color: White; width:100%">
-<p class="icona" >BUY 2 CHICKEN BUCKET GET 2 FREE</p>
-<h1>BU200</h1>
-<div id="but" style="text-align:center; position:relative; top:90px; ">
-<button class="button" style="  position: relative;
-     bottom: 100px;">COPY</button>
-</div>
 
 </div>
 </div>
 
 
 
-<div id="but" style="text-align:center; position:relative; top:100px;">
-<a href="" class="button" style="">SHOW IN MAP</a>
+<div id="but" style="text-align:center; position:relative; top:100px; border-width: 0px;">
+<a href="" class="button" style=" ">SHOW IN MAP</a>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script src="rdetailed.js"></script>
 
 </body>
 </html> 
