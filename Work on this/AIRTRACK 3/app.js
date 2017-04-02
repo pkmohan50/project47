@@ -18,7 +18,9 @@
 		flyRef.on('value', gotData, errData);
 
 		function gotData(data){
-			//console.log(data.val());
+			console.log(flyRef);
+			console.log(data);
+			console.log(data.val());
 			var Flights = data.val();
 			var keys = Object.keys(Flights);
 			//console.log(keys);
@@ -32,7 +34,8 @@
 				var imgUrl = Flights[k].Logo;
 				document
 					.querySelector("#flightlist")
-					.innerHTML+='<li class="list-group-item Flights[k]" style="border-style:solid; text-align:center; border-color:Teal; text-decoration:none; border-radius:50px; border-width:10px; font-size:30px; margin:20px; padding:10px 25px 10px 25px;  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); text-align:center; position:relative; top:20px"<div  class="lead"><img style="position:relative; display:block; top:90px; text-align:right;" src="'+imgUrl+'" width="150" height="150"><p style="position:relative; bottom:75px; ">'+Flights[k].Airlines+'</p></div> <p style="position:relative; bottom:75px;">'+Flights[k].Type+'</p><p style="position:relative; bottom:75px;">'+Flights[k].Status+'</p><p style="position:relative; bottom:75px;"><a href="'+url+'">See more</a></p></li>';
+					
+					.innerHTML+='<li class="list-group-item Flights[k]" style="border-style:solid; text-align:center; border-color:Teal; text-decoration:none;border-width:10px; font-size:30px; margin:20px;  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); position:relative; width:500;  "><div><img style="text-align:riht;" src="'+imgUrl+'" width="150" height="150"><p style="pos "><p class="lead">'+Flights[k].Airlines+'</p><p>'+Flights[k].Type+'</p><p>'+Flights[k].Status+'<br><a href="'+url+'">See more</a></p></div></li>';
 
 			}
 		}
