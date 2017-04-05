@@ -190,8 +190,8 @@
   <body>
   
 
-    <div id="menu">
-      <div id=mleft>
+<div id="menu">
+   <div id=mleft>
       <div id="mySidenav" class="sidenav">
   <a  href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
   <a href="index.html">HOME</a>
@@ -201,6 +201,8 @@
   <a href="service.html">SERVICES</a>
   <a href="food.html">FOOD</a>
   <a href="waiting.html">LOUNGE</a>
+  <a href="check.html">LOGIN</a>
+  <a href="pnr.html">MY FLIGHTS</a>
   <a href="contact.html">CONTACTS</a>
 </div>
 
@@ -255,6 +257,14 @@ function closeNav() {
 </div>
 </div>
 
+  <div class="col-md-4" style="text-align: left; width: 100%; height: 100%;" >
+        <ul id="loungelist" class="list-group" style="width: 100%; height: 100%;">
+          <!-- Conatct Object li.list-group-item.contact will be added here by js -->
+        </ul>
+  </div>
+
+
+<!--
 <div class="tile" >
 <div class="res">
 <a href="">
@@ -300,9 +310,9 @@ function closeNav() {
 </div>
 </div>
 
+-->
 
-  </body>
-
-
-
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script src="lapp.js"></script>
+</body>
 </html>

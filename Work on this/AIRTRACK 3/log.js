@@ -20,6 +20,7 @@
 		firebase.database().ref('currentUser/').set({
 		username: uName[0]
 		});
+		alert("You have logged in successfully!");
 		const pass = txtPassword.value;
 		const auth = firebase.auth();
 		const promise = auth.signInWithEmailAndPassword(email, pass);
@@ -32,6 +33,7 @@
 		const pass = txtPassword.value;
 		const auth = firebase.auth();
 		const promise = auth.createUserWithEmailAndPassword(email, pass);
+		alert("You have signed up successfully!");
 		promise.catch(e => console.log(e.message));
 	});
 

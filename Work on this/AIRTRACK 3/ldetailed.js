@@ -11,15 +11,15 @@ var FullURL = window.location.href;
 var param = FullURL.split('=');
 
 var db = firebase.database();
-var fref = db.ref("Restaurants").orderByKey().equalTo(param[1]);
+var fref = db.ref("Lounge").orderByKey().equalTo(param[1]);
 fref.on('value',gotData,errData);
 function gotData(data) {
-	var food = data.val();
-	console.log(food);
-	var keys = Object.keys(food);
+	var loun = data.val();
+	console.log(loun);
+	var keys = Object.keys(loun);
 	var k = keys[0];
 	console.log(k);
-	var imgurl=food[k].Logo;
+	var imgurl=loun[k].Logo;
 	var resRef = db.ref('Location').orderByKey().equalTo(k);
 				resRef.on('value', gData);
 				function gData(data1){
@@ -40,13 +40,13 @@ document
 	.innerHTML=k;
 document
 	.getElementById("but")
-	.innerHTML=food[k].Coupon;
+	.innerHTML=loun[k].Coupon;
 document
 	.getElementById("but1")
-	.innerHTML=food[k].Offers;
+	.innerHTML=loun[k].Offers;
 document
 	.getElementById("details")
-	.innerHTML=food[k].Description;
+	.innerHTML=loun[k].Description;
 document.getElementById("logo")
 						.innerHTML='<img class="icon" style="margin:0px; text-align:center; position:relative; top:20px; right:5px; border:dotted; border-color:#01ffff;" src="'+imgurl+'" width="200" height="200">'}
 }

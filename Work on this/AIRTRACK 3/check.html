@@ -59,10 +59,110 @@
   display: none;
 }
 
-</style>
+.menu
+        {
+         height: 60px;
+         padding-right: 300px;
+         background-color: Black;
+           box-shadow: 1px 5px 8px 0 rgba(0,0,0,0.3), 0 10px 20px 0 rgba(0,0,0,0.19);
+           
+        }
 
+        p{
+
+            font-family: 'Titillium Web', sans-serif;
+            color: White;
+            font-weight:bolder;
+        }
+
+        .menu a{
+            position: relative;
+            top: -60px;
+            left: 10px;
+        }
+
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.9;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+
+    font-size: 25px;
+    color: White;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #1abc9c;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    
+    left: 120px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 <head>
 <body style="background-color:#003434;">
+<div class="menu">
+<div id="mySidenav" class="sidenav">
+  <a style="position:relative;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
+  <a href="index.html">HOME</a>
+  <a href="flightdetails.html">FLIGHTS</a>
+  <a href="map.html">MAPS</a>
+  <a href="shop.html">SHOPS</a>
+  <a href="service.html">SERVICES</a>
+  <a href="food.html">FOOD</a>
+  <a href="waiting.html">LOUNGE</a>
+  <a href="check.html">LOGIN</a>
+  <a href="check.html">LOGIN</a>
+  <a href="pnr.html">MY FLIGHTS</a>
+  <a href="#">CONTACTS</a>
+</div>
+
+
+<span style="font-size:30px;cursor:pointer; position:relative;  top: 10px; left:5px;  color:White;" onclick="openNav()">&#9776;</span>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</div><br><br><br>
+
 <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
 
 <div class="login-page">
@@ -71,9 +171,9 @@
 
 	<input id="txtEmail" type="email" placeholder="Email" style="color:Grey;">
 	<input id="txtPassword" type="password" placeholder="Password">
-	
+	<a href="index.html">
 	<button id="btnLogin" class="btn btn-action">Log In</button>
-	
+	</a>
 	<button id="btnSignUp" class="btn btn-secondary">Sign Up</button>
 	<button id="btnLogout" class="btn btn-action hide">Log Out</button>
 </div>

@@ -11,7 +11,7 @@
 
         @font-face {
           font-family: "Dense";
-         src: url("C:/Users/k106tu/Desktop/airtrack/security/dense-regular-webfont.woff") format('woff');
+         src: url("C:/Users/Praveen/Desktop/Work on this/AIRTRACK 3/dense-regular-webfont.woff") format('woff');
             }
 
 
@@ -110,59 +110,6 @@ body {
   .sidenav a {font-size: 18px;}
 }
 
-.alert {
-    position:absolute;
-    width: 50%;
-    left: 50px;
-    padding: 90px;
-    background-color: Black;
-    color: white;
-    opacity: 0.9;
-    transition: opacity 0.5s;
-    
-}
-
-.alert p{
-  position: relative;
-  left: 135px;
-}
-
-
-.closebttn {
-    
-    color: white;
-    font-weight: bold;
-    float: right;
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.3s;
-    position: relative;
-
-}
-
-.closebttn:hover {
-    color: #d00068;
-}
-
-.button {
-    background-color:#4c082a ;
-    color: white;
-    border-radius: 5px;
-    padding: 15px 32px;
-    opacity: 1;
-    border-width:0px;
-    text-decoration:none; 
-    font-size: 16px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-
-}
-.button:hover{
-  background-color: #660b38;
-}
-
- 
     </style>
 	<title>
 		AIRTRACK
@@ -175,23 +122,26 @@ body {
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 <link href="http://www.1001fonts.com/dense-font.html" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">	
 </head>
 <body>
 <!--<div class="main">-->
 <!--menu button -->
- 
+
 
 <div class="menu">
 <div id="mySidenav" class="sidenav">
   <a style="position:relative;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times; </a>
   <a href="index.html">HOME</a>
-  <a href="flight.html">FLIGHTS</a>
+  <a href="flightdetails.html">FLIGHTS</a>
   <a href="map.html">MAPS</a>
   <a href="shop.html">SHOPS</a>
   <a href="service.html">SERVICES</a>
   <a href="food.html">FOOD</a>
   <a href="waiting.html">LOUNGE</a>
-  <a href="contact.html">CONTACTS</a>
+  <a href="check.html">LOGIN</a>
+  <a href="pnr.html">MY FLIGHTS</a>
+  <a href="#">CONTACTS</a>
 </div>
 
 
@@ -210,7 +160,7 @@ function closeNav() {
 </div><br><br><br>
 <div style="text-align: center;width:100%;" class="tiles">
 
-<a href="flight.html">
+<a href="flightdetails.html">
 <div class="res">
 <img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAD2ElEQVRoQ9VZTVbaUBT+bnCgMqhdQRkiGZQOek4YmaxAdiBdQd1BcQXaFWhXoF1BtBM4p4PiAOqsuILqQGUg3J6XkBhCEm5+QPqmvLz3fff3exfCf7Bso2pqVNpnRh0EE+AeMS4mo8evtM74rwz9gMFtEFWicDLz0VoSUBYnaKdxwF/IcG/tCFw19GMGDqWRsTYE7HplhzbL526MyxYzrgon8KNR3Rszbq3uzVAGA3DAb23bANWl36h9DC4uiW1DbxHhGMCOczjzkdUdtBcBygrevWNsFeKBKfjTMFh+xgfrZ78XRyIXePCt1RlUZgjYjd1DAu0RI3ApDYnGfjiMn0bXVm9454GKA+9ZyOreXEYRyAPePRufrG7/zCeQBGRRGMT9TsxtoolPwMuN3OCn1lf3OgSWAT4racl3KvY9z5Ld2G0StHPJh+uwR1UeqzPw+4TrgcZuE6w1ATSJ8GYdgEZLB3yzuv1W8LfZJK5XdrBZVkRUSdxbJyLM8+D9HIisEka1AmgtEFoEeveaZOLAJxIIArY/6nWUHH2y8hBLAi8mMEPG0FsgbhJof9leWQQ+EwG/gal82dpqgTWVL++LJiMBn4vAXIhtcAtMikwhVczs9EUyR7RJal23w5b/eIJO+l3UvpUTyCsPwiT46eFtUHPFypU8VgrmQxY9n3R3UC4k7csdQkVb3gO7EgLLAq9ILJ3AMsG7BPioRBN7/Fy6T3oUZQqhZYOfS+iQAo0Vc5KEXjV4PydiqlIqDxQBnhnXWTp3XE6ICRQE3tHzdqM2TKNwmXFvdfvOtCO85t4D2ub256iNTGimndsEzwlqG7tROyFQ5D2Rd08f8IkEirBwXA6FhZmS57SBX5Kc86YPiZ14leD97m3ovUW5sAi8o0ZfA7y62J1BaWqSF7skgo5so9YG6LAoGfwiBaLfsLP6qfw3NwH/QPVs3JiYAJlgMvMQkj5G7EbtIullJ/JAnAVs51FfUqNuE8SmtOxJwU/DKHEmJZHU8j4wnVIQ0RdptZFUGdvQ7+K8LRF0YgKOxYxqhaikXlxzi8Hfrc5AzZRSLdvQz4hwEF3/X0aIiWU0zY1xXVT6f0D4rqSeULgHXC9EWywrATcXoqWFqA+ksX5S/c5HILonSM5MlQMOgRgZILksqeJF5ZbkzNQEpmE0VzkklyV52zb0y/BAWXJmNgIRDUhy2QICaig28z+bpLJlJDAbs+qRgtGDKZnjxIaRO9ofBnvCUpI4nAdFgPflTKDCScCr7zJ5wMsDAMO8lg96xPu7Swo+J4FaG6PHkzxhExVOioTV+X0hLe//ACnJJhcqsuPDAAAAAElFTkSuQmCC" width="48" height="48">
 <p class="icon"> FLIGHTS</p>
@@ -229,28 +179,6 @@ function closeNav() {
 <p class="icon">SHOPS</p>
 </div></a>
 
-<div class="alert" style="">
-<p style="margin:0px; padding:0px; position:absolute;">ENTER YOUR PNR NUMBER</p>
-  <span class="closebttn">&times;</span>  
-
-   <div id="but" style="text-align:center; position:relative; top:70px;">
-<a href="" class="button" style="">GO!</a>
-</div>
-
-</div>
-
-<script>
-var close = document.getElementsByClassName("closebttn");
-var i;
-
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
-    }
-} 
-</script>
 
 <h1 align="center"> AIRTRACK</h1>
 

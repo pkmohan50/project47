@@ -22,10 +22,11 @@
 				var Name = Shop[k].Name;
 				var Description = Shop[k].Description;
 				var imgUrl = Shop[k].Logo;
+				var url="shopindie.html?v="+k;
 				console.log(Name, Description);
 				document
 					.querySelector("#shoplist")
-					.innerHTML+='<li class="list-group-item Shop[k]" style="border-style:solid; text-align:center; border-color:Teal; text-decoration:none;border-width:10px; font-size:30px; margin:20px;  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); position:relative; width:500;  "><div><img style="text-align:riht;" src="'+imgUrl+'" width="150" height="150"><p style="pos "><p class="lead">'+k+'</p><p>'+Shop[k].Name+'</p><p>'+Shop[k].Description+'</p></div></li>';
+					.innerHTML+='<li class="list-group-item Shop[k]" style="border-style:solid; text-align:center; border-color:Teal; text-decoration:none;border-width:10px; font-size:30px; margin:20px;  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); position:relative; width:500;  "><div><img style="text-align:riht;" src="'+imgUrl+'" width="150" height="150"><p style="pos "><p class="lead">'+k+'</p><p>'+Shop[k].Name+'</p><p>'+Shop[k].Description+'<a href="'+url+'">See more</a></p></div></li>';
 			}
 		}
 

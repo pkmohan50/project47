@@ -1,3 +1,4 @@
+
 		// Initialize Firebase
 var config = {
 	apiKey: "AIzaSyC1fK5BUmDK66Im40vesmMHadcjLseFxvQ",
@@ -11,17 +12,15 @@ var FullURL = window.location.href;
 var param = FullURL.split('=');
 
 var db = firebase.database();
-var fref = db.ref("Restaurants").orderByKey().equalTo(param[1]);
-fref.on('value',gotData,errData);
+var aref = db.ref("Amenities").orderByKey().equalTo(param[1]);
+aref.on('value',gotData,errData);
 function gotData(data) {
-	var food = data.val();
-	console.log(food);
-	var keys = Object.keys(food);
+	var amen = data.val();
+	var keys = Object.keys(amen);
 	var k = keys[0];
-	console.log(k);
-	var imgurl=food[k].Logo;
-	var resRef = db.ref('Location').orderByKey().equalTo(k);
-				resRef.on('value', gData);
+	var imgurl=amen[k].Logo;
+	var amRef = db.ref('Location').orderByKey().equalTo(k);
+				amRef.on('value', gData);
 				function gData(data1){
 					var Loc = data1.val();
 					var kies = Object.keys(Loc);
@@ -32,7 +31,7 @@ function gotData(data) {
 						//console.log(lat);
 						var mapUrl = "https://www.google.com/maps/dir/Current+Location/"+lat+","+lon;
 						document
-							.getElementById("mbut")
+							.getElementById("abut")
 							.innerHTML = '<a href="'+mapUrl+'" class="button" style="text-align:center;">SHOW IN MAP</a>';
 						}
 document
@@ -40,13 +39,11 @@ document
 	.innerHTML=k;
 document
 	.getElementById("but")
-	.innerHTML=food[k].Coupon;
-document
-	.getElementById("but1")
-	.innerHTML=food[k].Offers;
+	.innerHTML=amen[k].ContactNo;
+
 document
 	.getElementById("details")
-	.innerHTML=food[k].Description;
+	.innerHTML=amen[k].Description;
 document.getElementById("logo")
 						.innerHTML='<img class="icon" style="margin:0px; text-align:center; position:relative; top:20px; right:5px; border:dotted; border-color:#01ffff;" src="'+imgurl+'" width="200" height="200">'}
 }
@@ -54,3 +51,4 @@ document.getElementById("logo")
 			console.log("Error!");
 			console.log(err);
 		}
+
